@@ -4,53 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>DevTesting</title>
-  <style>
-    h1 {
-      font-size: 40px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(80,80,80);
-      text-align: center;
-    }
-
-    h2 {
-      fonfont: size;px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(80,80,80);
-      text-align: center;
-    }
-    
-    .bodytext {
-      font-size: 18px;
-      font-family: roboto;
-      color: rgb(10,10,10);
-    }
-
-    #banner{
-      width:100%;
-      height: 300px;
-      object-fit: cover;
-      
-    }
-
-    #container{
-      max-width: 720px;
-      margin: 0 auto 0 auto;
-    }
-
- 
-    
-  </style>
+<style>
+  #banner {
+    height: 260px;
+    object-fit: cover;
+    width: 100%;
+  }
+</style>
 </head>
   
 <body>
-  <div id="container">
-  <h1>...Testing Some Stuff</h1>
-  <img id="banner" src="../static/1941.jpg">
-  <h2>Some Text</h2>
-  <p class="bodytext">
+  <div class = "container">
+  <h1 class = "text-center mt-2 mb-4">Bowosh testing some Stuff</h1>
+  <img class = "img-fluid" id="banner" src="../static/1941.jpg">
+  <h2 class = "text-center mt-4 mb-4">Some Text</h2>
+  <p class="lead" >
     Streng genommen bedeutet Sinn das Woraufhin des primären 
 Entwurfs des Verstehens von Sein. Das sich selbst erschlossene 
 In-der-Welt-sein versteht mit dem Sein des Seienden, das es selbst 
@@ -63,12 +33,16 @@ Vorhandenen, gründen in jeweils mehr oder minder durchsichti-
 gen Entwürfen des Seins des entsprechenden Seienden. Diese 
 Entwürfe aber bergen in sich ein Woraufhin, aus dem sich gleich- 
 sam das Verstehen von Sein nährt.
-  </p>
-  <h2>Example Job Openings</h2>
-  <p>TODO --</p>
-    <div style="text-align: center">
-  <button>Contact Me</button>
-      <p>Copyright 2023, Bowosh</p>
+ </p>
+  <h2 class="text-center mt-2 mb-4">Open Positions</h2>  
+
+    {% for job in jobs %}
+      {% include 'jobitem.html' %}
+    {% endfor %}
+
+    <div class="text-center">
+  <button class="btn btn-primary btn-lg" style="margin-top: 40px">Contact Me</button>
+      <p class="mt-4">Copyright 2023, Bowosh</p>
     </div>
   </div>
 </body>
