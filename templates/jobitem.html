@@ -6,17 +6,17 @@
         <h4 style="color: rgb(120,120,120); margin-bottom: 4px"><b>{{job['title']}} </b>
         </h4>
          <div>
-          <b>Location: </b>  {{job['location']}}
+          <b>Technology: </b>  {{job['techn']}}
          </div>  
-        {%if 'salary' in job %}
+        {%if 'descr' in job %}
         <div>
-          <b>Salary: </b>  {{job['salary']}} 
+          <b>Description: </b>  {{job['descr']}} 
         </div> 
         {% endif %}
 
         </div>
         <div class="col-3 text-end">
-        <a href="mailto:schimpfermann@gmx.de" type="button" class="btn btn-outline-secondary">Apply</a>
+        <a href="mailto:schimpfermann@gmx.de" type="button" class="btn btn-outline-secondary">Go to</a>
         </div>
       </div>  
     

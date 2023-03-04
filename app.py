@@ -1,31 +1,21 @@
 from flask import Flask, render_template, jsonify
+from database import engine
+from sqlalchemy import text
 
 app = Flask(__name__)
 
-JOBS = [
-  {
-    'id': 1,
-    'title': 'Data Analyst',
-    'location': 'Mars',
-    'salary': '$inf'
-  },
-  {
-    'id': 2,
-    'title': 'Data Scientist',
-    'location': 'Jupiter',
-    'salary': '$inf'
-  },
-  {
-    'id': 3,
-    'title': 'Data Data',
-    'location': 'Remote',
-  },
-]
+
+def load_projects_from_db():
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from projects"))
+    projects = result.mappings().all()
+    return projects
 
 
 @app.route("/")
 def hello_world():
-  return render_template('home.html', jobs=JOBS)
+  jobs = load_projects_from_db()
+  return render_template('home.html', jobs=jobs)
 
 
 @app.route("/api/jobs")
