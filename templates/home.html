@@ -17,48 +17,38 @@
 </style>
 </head>
   
-<body>
+<body style="background-color: black">
   {% include 'nav.html' %}
     <img class = "img-fluid mb-2" id="banner" src="../static/1941.jpg">
+  
   <div class = "container">
-  <h1 class = "text-center mt-2 mb-4">Testing some Stuff</h1>
-    <p class = "text-center mb-5" style="font-size: 0.9rem">(This page is being developed with Python/Flask on Replit/<a href="https://github.com/bowosh/WebDevOnReplit_Testing">Github</a> and is deployed on Render)</p>
+
+    <p class = "text-begin mb-5" style="font-size: 0.9rem">(This page is being developed with Python/Flask on Replit/<a href="https://github.com/bowosh/WebDevOnReplit_Testing">Github</a> and  deployed on Render)</p>
    
 
 <div class="row mb-4">
-  <div class="col-6">
+  <div class="col-md-6" >
 
     
-  <p class="lead" style="font-size: 1.4rem">
-    Streng genommen bedeutet Sinn das Woraufhin des primären 
-Entwurfs des Verstehens von Sein. Das sich selbst erschlossene 
-In-der-Welt-sein versteht mit dem Sein des Seienden, das es selbst 
-ist, gleichursprünglich das Sein des innerweltlich entdeckten Sei- 
-enden, wenngleich unthematisch und sogar noch undifferenziert 
-in seinen primären Modi der Existenz und Realität. Alle ontische 
-Erfahrung von Seiendem, das umsichtige Berechnen des Zuhan- 
-denen sowohl wie das positiv wissenschaftliche Erkennen des 
-Vorhandenen, gründen in jeweils mehr oder minder durchsichti- 
-gen Entwürfen des Seins des entsprechenden Seienden. Diese 
-Entwürfe aber bergen in sich ein Woraufhin, aus dem sich gleich- 
-sam das Verstehen von Sein nährt.
- </p>
+<h1 style="font-size: 4rem">Web Development.</h1>
+<div style="height: 36px;" > </div>
+<h1 style="font-size: 4rem" >Data Science.</h1>
   </div>
   
-  <div class="col-6 text-end">
-      <img src="/static/unsplash_keyboard.jpg" style="height: 380px; border-radius: 4px" >
+  <div class="col-md-6 d-md-block d-none text-end ">
+      <img src="/static/vanillacoding.jpg" style="height: 520px; border-radius: 4px" >
   </div>
   
 
 </div>
-  <h2 class="text-center mt-5 mb-4">Open Positions</h2>  
+  <h2 class="text-center mt-5 mb-4">Projects</h2>  
 
     {% for job in jobs %}
       {% include 'jobitem.html' %}
     {% endfor %}
 
     <div class="text-center">
-  <button class="btn btn-primary btn-lg" style="margin-top: 40px">Contact Me</button>
+  <a href= "mailto:bowosh@gmx.de" class="btn btn-primary btn-lg" style="margin-top: 40px">Contact Me</a>
      
     </div>
   </div>
